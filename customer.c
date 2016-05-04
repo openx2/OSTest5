@@ -50,6 +50,7 @@ int main(int argc,char* argv[])
                 msgsnd(q_wait,&msg_arg,sizeof(msg_arg),0);
             }
             else {
+		count++;
                 printf("等候室满，%d号顾客没有进入理发店\n",count);
                 down(s_customer);
             }
